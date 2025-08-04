@@ -1,7 +1,9 @@
+import { HeroSection } from "@/components/organisms/hero-section";
+
 export default function Home() {
   return (
     <div>
-      <p>home page</p>
+      <HeroSection />
     </div>
   );
 }
