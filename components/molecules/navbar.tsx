@@ -5,7 +5,9 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export interface NavbarProps {}
+export interface NavbarProps {
+  className?: string;
+}
 
 export interface NavItemProps {
   href: string;
@@ -48,9 +50,9 @@ export function NavItem({ href, children }: NavItemProps) {
   );
 }
 
-export function Navbar({}: NavbarProps) {
+export function Navbar({ className }: NavbarProps) {
   return (
-    <div className="bg-[#FAFCF0] p-3">
+    <div className={`bg-[#FAFCF0] p-3 ${className}`}>
       <div className="w-9/10 mx-auto flex justify-between">
         <Link href="/">
           <Image src="/creatan-icon.png" alt="Logo" width={100} height={100} />
