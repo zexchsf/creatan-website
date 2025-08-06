@@ -28,7 +28,7 @@ import { z } from "zod";
 const contactFormSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
   phoneNumber: z.string().min(10, "Phone number must be at least 10 digits"),
-  emailAddress: z.string().email("Please enter a valid email address"),
+  emailAddress: z.email("Please enter a valid email address"),
   interest: z.string().min(1, "Please select an interest"),
   additionalInfo: z.string().min(10, "Message must be at least 10 characters"),
 });

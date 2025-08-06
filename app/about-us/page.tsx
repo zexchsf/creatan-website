@@ -1,7 +1,5 @@
+import { AboutUsPage } from "@/components/layouts/AboutUs";
+
 export default function AboutUs() {
-  return (
-    <div>
-      <p>hello world</p>
-    </div>
-  );
+  return <AboutUsPage />;
 }
