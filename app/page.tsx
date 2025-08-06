@@ -1,9 +1,5 @@
-import { HeroSection } from "@/components/organisms/hero-section";
+import HomeLayout from "@/components/layouts/Home";
 
 export default function Home() {
-  return (
-    <div>
-      <HeroSection />
-    </div>
-  );
+  return <HomeLayout />;
 }

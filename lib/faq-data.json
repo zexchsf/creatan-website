@@ -1,0 +1,29 @@
+{
+  "faqs": [
+    {
+      "id": "item-1",
+      "question": "What methods of payments are supported?",
+      "answer": "We accept all major credit cards, bank transfers, and certified checks. For property purchases, we also work with mortgage lenders and can assist with financing options. Payment methods may vary depending on the specific property and transaction type."
+    },
+    {
+      "id": "item-2",
+      "question": "Can I cancel an anytime?",
+      "answer": "Yes, you can cancel most of our services with appropriate notice. For property viewings and consultations, we require 24-48 hours notice. For listing agreements, cancellation terms are outlined in your contract. Please contact us to discuss your specific situation."
+    },
+    {
+      "id": "item-3",
+      "question": "How do I get a receipt for my purchase?",
+      "answer": "All receipts and transaction documents are provided digitally through our secure client portal. You'll receive an email confirmation immediately after any payment, and detailed receipts are available for download in your account dashboard within 24 hours."
+    },
+    {
+      "id": "item-4",
+      "question": "Which license do I need?",
+      "answer": "As our client, you don't need any special licenses to buy or sell property with us. We handle all the licensing requirements as licensed real estate professionals. However, if you're looking to become a real estate agent yourself, we can provide guidance on obtaining your real estate license."
+    },
+    {
+      "id": "item-5",
+      "question": "How do I get access to a theme I purchased?",
+      "answer": "Once you've signed a purchase agreement or lease, you'll receive access credentials to our client portal where you can view all property documents, track transaction progress, and communicate with your dedicated agent. Access is typically granted within 1-2 business hours of contract signing."
+    }
+  ]
+}
