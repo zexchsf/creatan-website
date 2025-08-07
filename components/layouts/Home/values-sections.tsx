@@ -1,37 +1,51 @@
-import {
-  FaLeaf,
-  FaHandshake,
-  FaUsers,
-  FaStar,
-  FaLightbulb,
-} from "react-icons/fa";
+import CommunityIcon from "@/assets/icons/community-icon.png";
+import ExcellenceIcon from "@/assets/icons/excellence-icon.png";
+import InnovationIcon from "@/assets/icons/innovation-icon.png";
+import IntegrityIcon from "@/assets/icons/integrity-icon.png";
+import SustainabilityIcon from "@/assets/icons/sustainability-icon.png";
+import Image from "next/image";
 
 export function ValuesSection() {
   const values = [
     {
-      icon: <FaLeaf className="text-[#006B05] text-2xl" />,
+      icon: (
+        <Image
+          src={SustainabilityIcon}
+          alt="Sustainability"
+          height={82}
+          width={82}
+        />
+      ),
       title: "Sustainability",
       description:
         "We prioritize green development and long-term environmental stewardship.",
     },
     {
-      icon: <FaHandshake className="text-[#006B05] text-2xl" />,
+      icon: (
+        <Image src={IntegrityIcon} alt="Integrity" height={82} width={82} />
+      ),
       title: "Integrity",
       description: "We build on trust, transparency, and ethical practices.",
     },
     {
-      icon: <FaUsers className="text-[#006B05] text-2xl" />,
+      icon: (
+        <Image src={CommunityIcon} alt="Community" height={82} width={82} />
+      ),
       title: "Community",
       description:
         "We believe in creating spaces that foster togetherness and safety.",
     },
     {
-      icon: <FaStar className="text-[#006B05] text-2xl" />,
+      icon: (
+        <Image src={ExcellenceIcon} alt="Excellence" height={82} width={82} />
+      ),
       title: "Excellence",
       description: "Our commitment to quality is reflected in every detail.",
     },
     {
-      icon: <FaLightbulb className="text-[#006B05] text-2xl" />,
+      icon: (
+        <Image src={InnovationIcon} alt="Innovation" height={82} width={82} />
+      ),
       title: "Innovation",
       description: "We embrace smart technologies and modern solutions.",
     },
@@ -106,4 +120,3 @@ export function ValuesSection() {
     </section>
   );
 }
-
