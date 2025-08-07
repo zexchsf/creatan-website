@@ -27,10 +27,10 @@ const navigations = [
     title: "Properties",
     href: "/properties",
   },
-  {
-    title: "Our Services",
-    href: "/services",
-  },
+  // {
+  //   title: "Our Services",
+  //   href: "/services",
+  // },
 ];
 
 export function NavItem({ href, children }: NavItemProps) {
@@ -70,9 +70,11 @@ export function Navbar({ className }: NavbarProps) {
             ))}
           </div>
 
-          <Button className="bg-[#00355B] hover:bg-[#00355B]/90 rounded-[2rem] h-14 font-medium py-[18px] px-[42px] text-white">
-            Contact Us
-          </Button>
+          <Link href="/contact-us">
+            <Button className="bg-[#00355B] cursor-pointer hover:bg-[#00355B]/90 rounded-[2rem] h-14 font-medium py-[18px] px-[42px] text-white">
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

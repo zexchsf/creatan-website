@@ -4,7 +4,7 @@ import { ContactForm } from "./contact-form";
 import { ContactInformation } from "./contact-information";
 import { Hero } from "./hero";
 
-export function AboutUsPage() {
+export function ContactUsPage() {
   return (
     <div>
       <Hero />
