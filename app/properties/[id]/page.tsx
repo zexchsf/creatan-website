@@ -1,11 +1,12 @@
 import { PropertyDetailPage } from "@/components/layouts/property-detail";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
-export default function PropertyPage({ params }: PageProps) {
-  return <PropertyDetailPage id={params.id} />;
+export default async function PropertyPage({ params }: PageProps) {
+  const { id } = await params;
+  return <PropertyDetailPage id={id} />;
 }
