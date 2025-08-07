@@ -4,7 +4,6 @@ import { Testimonial } from "@/components/molecules/testimonial";
 import { testimonials } from "@/lib/data";
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import type { Swiper as SwiperType } from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
