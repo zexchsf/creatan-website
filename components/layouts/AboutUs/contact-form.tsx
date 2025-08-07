@@ -65,12 +65,12 @@ export function ContactForm() {
       <div className="max-w-6xl relative ">
         <div className="mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-[#323232] mb-4">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p className="text-[#6B6B6B] text-lg">
-            We'd love to hear from you! Fill out the form to connect with
-            Creatan Garden — whether you're a client, partner, or just curious
-            about our services, we're here to answer your questions and provide
+            We&apos;d love to hear from you! Fill out the form to connect with
+            Creatan Garden — whether you&apos;re a client, partner, or just curious
+            about our services, we&apos;re here to answer your questions and provide
             the assistance you need.
           </p>
         </div>

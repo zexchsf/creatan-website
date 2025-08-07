@@ -4,8 +4,9 @@ import { formatPrice } from "@/lib/currency";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+import { Property } from "@/types/property";
 
-export function PropertyCard({ property }: { property: any }) {
+export function PropertyCard({ property }: { property: Property }) {
   const router = useRouter();
 
   return (

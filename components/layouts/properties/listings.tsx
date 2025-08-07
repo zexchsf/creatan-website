@@ -1,7 +1,6 @@
 "use client";
 
 import { PropertyCard } from "@/components/organisms/property-card";
-import { properties } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -11,7 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Search, MapPin, Building, DollarSign, Home } from "lucide-react";
+import { properties } from "@/lib/data";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { FaHouseChimney, FaLocationDot, FaMoneyBills } from "react-icons/fa6";

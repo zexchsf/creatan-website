@@ -1,39 +1,28 @@
-import {
-  FaLeaf,
-  FaHandshake,
-  FaUsers,
-  FaStar,
-  FaLightbulb,
-  FaChevronLeft,
-  FaChevronRight,
-} from "react-icons/fa";
 import Image from "next/image";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export function HomeSection() {
- 
-
   const categories = [
     {
       title: "Apartment Residences",
       properties: "500 Properties",
-      image: "/images/apartment-residences.jpg", // Replace with actual image path
+      image: "/images/apartment-residences.jpg",
     },
     {
       title: "Landed Properties",
       properties: "12,000 Properties",
-      image: "/images/landed-properties.jpg", // Replace with actual image path
+      image: "/images/landed-properties.jpg",
     },
     {
       title: "Buildings for Rent",
       properties: "50 Properties",
-      image: "/images/buildings-rent.jpg", // Replace with actual image path
+      image: "/images/buildings-rent.jpg",
     },
   ];
 
   return (
     <div className="h-full space-y-6">
       {/** Our Values */}
-   
 
       {/** Categories */}
       <section className="py-16 bg-white">

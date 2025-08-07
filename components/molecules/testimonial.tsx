@@ -1,6 +1,6 @@
-import { FaHome, FaBed, FaBath, FaStar, FaQuoteLeft } from "react-icons/fa";
 import QuoteIcon from "@/assets/icons/quote.svg";
 import Image from "next/image";
+import { FaBath, FaBed, FaHome, FaStar } from "react-icons/fa";
 
 interface TestimonialData {
   name: string;
@@ -68,7 +68,7 @@ export function Testimonial({ testimonial, className }: TestimonialProps) {
 
       {/* Quote */}
       <p className="text-[#6B6B6B] leading-relaxed text-sm">
-        "{testimonial.testimonial}"
+        &quot;{testimonial.testimonial}&quot;
       </p>
     </div>
   );

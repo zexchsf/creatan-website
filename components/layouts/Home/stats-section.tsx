@@ -78,7 +78,7 @@ export function StatsSection() {
         return () => clearInterval(timer);
       });
     }
-  }, [isVisible]);
+  }, [isVisible, stats]);
 
   return (
     <div

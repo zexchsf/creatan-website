@@ -88,7 +88,7 @@ export function ContactUsSection() {
                 Ready to Find Your Property?
               </h2>
               <p className="text-[#6B6B6B] text-lg">
-                Tell us what you're looking for, and our team will reach out
+                Tell us what you&apos;re looking for, and our team will reach out
                 with tailored options and expert guidance.
               </p>
             </div>

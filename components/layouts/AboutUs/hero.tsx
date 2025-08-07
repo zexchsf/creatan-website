@@ -23,10 +23,10 @@ export function Hero() {
                 Get in Touch with Creatan Garden
               </h1>
               <p className="text-white text-lg lg:text-xl leading-relaxed ">
-                Welcome to Creatan Garden's contact page. We're here to assist
+                Welcome to Creatan Garden&apos;s contact page. We&apos;re here to assist
                 you with any inquiries, requests, or feedback you may have.
-                Whether you're looking to buy or rent a property, or simply want
-                to connect, we're just a message away. Reach out to us and let's
+                Whether you&apos;re looking to buy or rent a property, or simply want
+                to connect, we&apos;re just a message away. Reach out to us and let&apos;s
                 start a conversation.
               </p>
             </div>

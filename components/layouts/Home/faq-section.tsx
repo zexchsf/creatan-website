@@ -10,7 +10,7 @@ export function FaqSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-[#999999] max-w-3xl mx-auto">
-            Get answers to common questions about Creatan Garden's services,
+            Get answers to common questions about Creatan Garden&apos;s services,
             listings, and process.
           </p>
         </div>

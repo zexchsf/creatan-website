@@ -3,6 +3,7 @@ import Property2 from "@/assets/images/property-2.png";
 import SeaSideSerenity from "@/assets/images/seaside-serenity-villa.jpg";
 import Metropolitan from "@/assets/images/metropolitan.jpg";
 import Cottage from "@/assets/images/cottage.jpg";
+import { Property } from "@/types/property";
 
 export const testimonials = [
   {
@@ -89,7 +90,7 @@ export const faqs = [
   },
 ];
 
-export const properties = [
+export const properties: Property[] = [
   {
     property_id: "property-1",
     title: "Luxury Apartment",

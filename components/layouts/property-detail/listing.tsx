@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Square } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import { formatPrice } from "@/lib/currency";
 import { cn } from "@/lib/utils";
@@ -11,14 +11,15 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FaBed, FaLocationDot } from "react-icons/fa6";
 import { HiLightningBolt } from "react-icons/hi";
 import { PiBathtubFill } from "react-icons/pi";
+import { Property } from "@/types/property";
 
 interface ListingsProps {
-  property: any;
+  property: Property;
 }
 
 export function Listing({ property }: ListingsProps) {
   const [image, setImage] = useState({
-    src: property?.images?.[0] || "",
+    src: property?.images?.[0],
     index: 0,
   });
 
@@ -52,33 +53,35 @@ export function Listing({ property }: ListingsProps) {
 
           <div className=" bg-[#1A1A1A] p-10 rounded-xl overflow-hidden">
             <div className="flex gap-2 overflow-x-auto">
-              {property?.images.map((image_url: string, key: number) => (
-                <div
-                  className="relative cursor-pointer"
-                  key={key}
-                  onClick={() =>
-                    setImage({
-                      src: image_url,
-                      index: key,
-                    })
-                  }
-                >
+              {property?.images.map(
+                (image_url: string | StaticImageData, key: number) => (
                   <div
-                    className={cn(
-                      "absolute inset-0 bg-[#0A0A0A80] z-10 pointer-events-none",
-                      {
-                        hidden: key === image.index,
-                      }
-                    )}
-                  ></div>
-                  <Image
-                    src={image_url}
-                    width={122}
-                    height={74}
-                    alt={property?.title || "Property Image"}
-                  />
-                </div>
-              ))}
+                    className="relative cursor-pointer"
+                    key={key}
+                    onClick={() =>
+                      setImage({
+                        src: image_url,
+                        index: key,
+                      })
+                    }
+                  >
+                    <div
+                      className={cn(
+                        "absolute inset-0 bg-[#0A0A0A80] z-10 pointer-events-none",
+                        {
+                          hidden: key === image.index,
+                        }
+                      )}
+                    ></div>
+                    <Image
+                      src={image_url}
+                      width={122}
+                      height={74}
+                      alt={property?.title || "Property Image"}
+                    />
+                  </div>
+                )
+              )}
             </div>
 
             <div className="mt-8">
@@ -117,7 +120,7 @@ export function Listing({ property }: ListingsProps) {
                 />
               </button>
               <div className="flex gap-1">
-                {property?.images?.map((_: string, i: number) => (
+                {property?.images?.map((img: string | StaticImageData, i: number) => (
                   <div
                     key={i}
                     className={`w-2 h-2 rounded-full ${
