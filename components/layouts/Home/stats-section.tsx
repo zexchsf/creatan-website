@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo, useCallback } from "react";
 import StatAbstract from "@/assets/stats-abstract.png";
 
 export function StatsSection() {
-  const stats = [
+  const stats = useMemo(() => [
     {
       value: 20,
       suffix: "+",
@@ -26,11 +26,12 @@ export function StatsSection() {
       suffix: "k",
       label: "Properties sold",
     },
-  ];
+  ], []);
 
   const [isVisible, setIsVisible] = useState(false);
   const [animatedValues, setAnimatedValues] = useState(stats.map(() => 0));
   const sectionRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -49,43 +50,52 @@ export function StatsSection() {
     return () => observer.disconnect();
   }, [isVisible]);
 
+  const animateCounter = useCallback((finalValue: number, index: number) => {
+    const startTime = Date.now();
+    const duration = 2000; // 2 seconds
+
+    const updateCounter = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentValue = Math.floor(finalValue * easeOutQuart);
+
+      setAnimatedValues(prev => {
+        const newValues = [...prev];
+        newValues[index] = currentValue;
+        return newValues;
+      });
+
+      if (progress < 1) {
+        animationRef.current[index] = requestAnimationFrame(updateCounter);
+      }
+    };
+
+    animationRef.current[index] = requestAnimationFrame(updateCounter);
+  }, []);
+
   useEffect(() => {
     if (isVisible) {
+      animationRef.current.forEach(id => id && cancelAnimationFrame(id));
+      animationRef.current = [];
+
       stats.forEach((stat, index) => {
-        let start = 0;
-        const end = stat.value;
-        const duration = 2000; // 2 seconds
-        const increment = end / (duration / 16); // 60fps
-
-        const timer = setInterval(() => {
-          start += increment;
-          if (start >= end) {
-            setAnimatedValues((prev) => {
-              const newValues = [...prev];
-              newValues[index] = end;
-              return newValues;
-            });
-            clearInterval(timer);
-          } else {
-            setAnimatedValues((prev) => {
-              const newValues = [...prev];
-              newValues[index] = Math.floor(start);
-              return newValues;
-            });
-          }
-        }, 16);
-
-        return () => clearInterval(timer);
+        animateCounter(stat.value, index);
       });
     }
-  }, [isVisible, stats]);
+
+    return () => {
+      animationRef.current.forEach(id => id && cancelAnimationFrame(id));
+      animationRef.current = [];
+    };
+  }, [isVisible, stats, animateCounter]);
 
   return (
     <div
       ref={sectionRef}
       className="relative bg-[#002641] py-16 overflow-hidden"
     >
-      {/* Background abstract images */}
       <div className="absolute left-0 top-0 -bottom-20">
         <Image
           src={StatAbstract}
