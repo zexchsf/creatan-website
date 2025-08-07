@@ -1,5 +1,11 @@
 import { PropertyDetailPage } from "@/components/layouts/property-detail";
 
-export default function PropertyPage({ params }: { params: { id: string } }) {
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default function PropertyPage({ params }: PageProps) {
   return <PropertyDetailPage id={params.id} />;
 }
