@@ -52,7 +52,7 @@ export function Listings() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-[#E6F5E6] p-3">
               <Select value={locationFilter} onValueChange={setLocationFilter}>
-                <SelectTrigger className="px-4 py-3.5 w-full bg-[#8ACF8D] border border-[#6B6B6B] text-green-800 rounded-xl">
+                <SelectTrigger className="px-3.5 py-4 w-full bg-[#8ACF8D] border border-[#6B6B6B] text-green-800 rounded-xl">
                   <div className="flex items-center gap-2">
                     <FaLocationDot className="w-4 h-4 text-[#464646]" />
                     <span className="h-5 w-px bg-[#6B6B6B] mx-1" />
@@ -70,7 +70,7 @@ export function Listings() {
                 value={propertyTypeFilter}
                 onValueChange={setPropertyTypeFilter}
               >
-                <SelectTrigger className="px-4 py-3.5 w-full bg-[#8ACF8D] border border-[#6B6B6B] text-green-800 rounded-xl">
+                <SelectTrigger className="px-3.5 py-4 w-full bg-[#8ACF8D] border border-[#6B6B6B] text-green-800 rounded-xl">
                   <div className="flex items-center gap-2">
                     <FaHouseChimney className="w-4 h-4 text-[#464646]" />
                     <span className="h-5 w-px bg-[#6B6B6B] mx-1" />
@@ -89,7 +89,7 @@ export function Listings() {
                 value={priceRangeFilter}
                 onValueChange={setPriceRangeFilter}
               >
-                <SelectTrigger className="px-4 py-3.5 w-full bg-[#8ACF8D] border border-[#6B6B6B] text-green-800 rounded-xl">
+                <SelectTrigger className="px-3.5 py-4 w-full bg-[#8ACF8D] border border-[#6B6B6B] text-green-800 rounded-xl">
                   <div className="flex items-center gap-2">
                     <FaMoneyBills className="w-4 h-4 text-[#464646]" />
                     <span className="h-5 w-px bg-[#6B6B6B] mx-1" />
