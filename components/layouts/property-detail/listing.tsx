@@ -97,10 +97,10 @@ export function Listing({ property }: ListingsProps) {
 
             <div className="flex items-center justify-center gap-4 mt-6">
               <button
-                className={`rounded-full border border-gray-300 flex items-center justify-center transition-all ${
+                className={`rounded-full border border-gray-300 flex items-center justify-center transition-all w-[50px] h-[50px] ${
                   image.index === 0
-                    ? "bg-[#DFDFDF] w-[50px] h-[50px] cursor-not-allowed"
-                    : "bg-[#323232] hover:bg-[#404040] w-[56px] h-[56px]"
+                    ? "bg-[#DFDFDF] cursor-not-allowed"
+                    : "bg-[#323232] hover:bg-[#404040]"
                 }`}
                 disabled={image.index === 0}
                 onClick={() => {
@@ -119,21 +119,21 @@ export function Listing({ property }: ListingsProps) {
                   }`}
                 />
               </button>
-              <div className="flex gap-1">
+              <div className="flex bg-[#141414] p-2 rounded-full gap-1">
                 {property?.images?.map((img: string | StaticImageData, i: number) => (
                   <div
                     key={i}
-                    className={`w-2 h-2 rounded-full ${
-                      i === image.index ? "bg-white" : "bg-white/40"
+                    className={`w-3 h-1 ${
+                      i === image.index ? "bg-[#33AB39]" : "bg-[#4D4D4D]"
                     }`}
                   />
                 ))}
               </div>
               <button
-                className={`rounded-full border border-gray-300 flex items-center justify-center transition-all ${
+                className={`rounded-full border border-gray-300 flex items-center justify-center transition-all w-[50px] h-[50px] ${
                   image.index + 1 === property?.images?.length
-                    ? "bg-[#DFDFDF] w-[50px] h-[50px] cursor-not-allowed"
-                    : "bg-[#323232] hover:bg-[#404040] w-[56px] h-[56px]"
+                    ? "bg-[#DFDFDF]  cursor-not-allowed"
+                    : "bg-[#323232] hover:bg-[#404040]"
                 }`}
                 disabled={image.index + 1 === property?.images?.length}
                 onClick={() => {
@@ -159,7 +159,7 @@ export function Listing({ property }: ListingsProps) {
 
           <div className="p-6 pt-4">
             <div className="grid md:grid-cols-2 gap-8">
-              <div>
+              <div className="py-10 pl-10">
                 <h3 className="text-2xl font-semibold text-[#323232] mb-3">
                   Description
                 </h3>
@@ -167,9 +167,8 @@ export function Listing({ property }: ListingsProps) {
                   {property?.description}
                 </p>
 
-                {/* Property Stats */}
-                <div className="flex items-center gap-6 text-sm text-gray-600">
-                  <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-6 text-sm">
+                  <div className="flex flex-col gap-1 border-r border-[#AAAAAA] pr-[18px]">
                     <div className="flex items-center gap-1 text-[#6B6B6B]">
                       <FaBed className="text-xl" />
                       <span className="text-sm">Bedrooms</span>
@@ -181,7 +180,7 @@ export function Listing({ property }: ListingsProps) {
                     </span>
                   </div>
 
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-1 border-r border-[#AAAAAA] pr-[18px]">
                     <div className="flex items-center gap-1 text-[#6B6B6B]">
                       <PiBathtubFill className="text-xl" />
                       <span className="text-sm">Bathrooms</span>
@@ -205,7 +204,7 @@ export function Listing({ property }: ListingsProps) {
                 </div>
               </div>
 
-              <div>
+              <div className="py-10 pl-10">
                 <h3 className="text-xl font-medium text-[#323232] mb-10">
                   Key Features and Amenities
                 </h3>

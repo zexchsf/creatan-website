@@ -63,7 +63,7 @@ export function ContactUsSection({ property }: ContactUsSectionProps) {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-3xl lg:text-4xl font-bold text-[#323232]">
-                Inquire About {property?.title} {property?.location} Property
+                Inquire About {property?.title}, {property?.location} Property
               </h2>
               <p className="text-[#6B6B6B] text-lg">
                 Interested in this property? Fill out the form below, and our
