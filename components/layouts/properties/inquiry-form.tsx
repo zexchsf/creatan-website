@@ -19,6 +19,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
@@ -68,7 +69,7 @@ export default function RealEstateInquiryForm({ className }: RealEstateInquiryFo
   };
 
   return (
-    <section className={`bg-[#E6F5E6] py-16 px-4 relative overflow-hidden ${className}`}>
+    <section className={cn("bg-[#E6F5E6] py-16 px-4 relative overflow-hidden", className)}>
       <div className="absolute inset-0 pointer-events-none">
         <Image src={SpiralVortex} alt="" fill className="object-cover" />
       </div>

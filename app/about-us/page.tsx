@@ -1,3 +1,5 @@
+import AboutUsPage from "@/components/layouts/AboutUs";
+
 export default function AboutUs() {
-  return <div>About Us</div>;
+  return <AboutUsPage />
 }
