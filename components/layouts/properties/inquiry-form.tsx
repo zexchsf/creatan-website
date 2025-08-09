@@ -78,10 +78,10 @@ export default function RealEstateInquiryForm({ className }: RealEstateInquiryFo
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="space-y-6 lg:pr-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-[#323232] leading-tight">
-              Let's Make it Happen
+              Let&apos;s Make it Happen
             </h2>
             <p className="text-lg text-[#6B6B6B] leading-relaxed">
-              Ready to find your dream property? Fill out the form and let our real estate experts do the rest. Let's get started!
+              Ready to find your dream property? Fill out the form and let our real estate experts do the rest. Let&apos;s get started!
             </p>
           </div>
 
