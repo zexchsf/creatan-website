@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-export function HomeSection() {
+export function CategoriesSection() {
   const categories = [
     {
       title: "Apartment Residences",

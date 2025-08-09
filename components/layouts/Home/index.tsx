@@ -1,4 +1,5 @@
 import { AboutUsSection } from "./about-us-section";
+import { CategoriesSection } from "./categories-section";
 import { ContactUsSection } from "./contact-us-section";
 import { FaqSection } from "./faq-section";
 import { HeroSection } from "./hero-section";
@@ -13,6 +14,7 @@ function HomeLayout() {
       <HeroSection />
       <Partners />
       <ValuesSection />
+      <CategoriesSection />
       <StatsSection />
       <TestimonialsSection />
       <AboutUsSection />
